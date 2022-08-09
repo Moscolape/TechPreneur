@@ -1,0 +1,190 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+#content {
+    display: grid;
+    transition: margin-left 0.7s;
+    /* overflow: hidden; */
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding: 28.5px 30px;
+    margin: -10px;
+    transition: width 0.7s;
+    border-bottom: 1px solid #3d3d3d7c;
+    /* background: red; */
+
+}
+
+.slide i {
+    color: black;
+    font-size: 30px;
+}
+
+.slide a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#close {
+    display: none;
+}
+
+#dash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}
+
+#dash img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+}
+
+.nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: 0.7s;
+    overflow-x: hidden;
+    padding-top: 100px;
+    background: lightgrey;
+}
+
+.nav .close {
+    font-size: 20px;
+    color: #3d3d3d;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+.nav a.item {
+    display: flex;
+    flex-direction: row;
+    padding: 18px 30px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: white;
+    background: #3d3d3d7c;
+    border-top: 1px solid #ccc;
+}
+
+.nav .last {
+    border-bottom: 1px solid #ccc;
+}
+
+.nav .icon {
+    padding-right: 15px;
+    font-size: 25px;
+}
+
+#main {
+    margin: 80px 20px;
+    transition: width 0.7s;
+    display: grid;
+    grid-template-areas: none
+        'a a b b'
+        'c c d d'
+    ;
+    gap: 50px;
+}
+
+#main div:nth-child(1) {
+    grid-area: 'a';
+    height: 300px;
+    background: lightgray;
+}
+
+#main div:nth-child(2) {
+    grid-area: 'b';
+    height: 300px;
+    background: lightgray;
+}
+
+#main div:nth-child(3) {
+    grid-area: 'c';
+    height: 300px;
+    background: lightgray;
+}
+
+#main div:nth-child(4) {
+    grid-area: d;
+    height: 300px;
+    background: lightgray;
+}
+
+#main div {
+    position: relative;
+}
+
+h4 {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    right: 25%;
+    z-index: 9;
+    background-color: white;
+    width: 50%;
+    text-align: center;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    padding: 30px;
+    /* margin: 20px; */
+  }
+
+  .form-container button {
+    margin: 0px 30px;
+    width: 120px;
+    height: 40px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .form-container button a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .small {
+    font-size: 30px; padding-left: 10px;color: red; display: block;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 576px) {
+    .slide i {
+        font-size: 20px;
+        color: red;
+    }
+    
+    .slide a {
+        font-size: 16px;
+    }
+  }

@@ -1,0 +1,449 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #logo {
+    width: 200px;
+    height: 50px;
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+  }
+
+  .nav {
+    width: 100%;
+    box-shadow: 0 0 10px lightgray;
+  }
+
+  
+  .nav__list {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2rem;
+      margin: 0 1rem;
+  }
+
+  a {
+      text-decoration: none;
+      color: black;
+  }
+
+  .listitem {
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    padding: 1.5rem 0.3rem;
+    cursor: pointer;
+  }
+
+  .listitem::after {
+    content: '';
+    width: 0;
+    height: 0.3rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 0.3rem;
+    bottom: 0.8rem;
+    background-color: rgb(207, 6, 143);
+    transition: width 200ms ease-in-out;
+  }
+
+  .listitem:hover::after, .listitem:focus::after {
+    width: 80%;
+  }
+
+  .listitem:hover ul, .listitem:focus ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 4rem;
+    left: -1rem;
+    box-shadow: 0 0 10px lightgray;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 10rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-in-out;
+    z-index: 2;
+
+  }
+
+  .dropdown li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 200ms ease-in-out;
+  }
+
+  .dropdown li:hover, .dropdown li:focus {
+    background-color: rgb(207, 6, 143);
+    color: white;
+  }
+
+  .dropdown li:hover span {
+    color: white;
+  }
+
+  .intro{
+    background-image: url('../images/orange.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 400px;
+    margin: 0px 0px;
+  }
+
+  .intro p {
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    padding: 250px 0px 0px 30px;
+  }
+
+  .inputs {
+    margin: 60px 30px;
+    display: flex;
+  }
+
+  .inputs p {
+    font-size: 18px;
+    margin: 10px 20px;
+  }
+
+  select {
+    width: 200px;
+    height: 40px;
+    margin: 0px 20px;
+    font-size: 18px;
+    border: 3px solid orange;
+    outline: none;
+  }
+
+  .pdf {
+    margin: 10px;
+    display: flex;
+  }
+
+  .eachpdf {
+      width: 300px;
+      height: 400px;
+      margin: 20px;
+      box-shadow: 0 0 10px lightgray;
+      border-radius: 50px 10px 10px 10px;
+  }
+
+  .eachpdf img {
+      width: 100%;
+      height: 200px;
+      border-radius: 50px 10px;
+      margin: 0px 0px 20px 0px;
+      object-fit: cover;
+  }
+
+  .eachpdf h4, .eachpdf p {
+      padding: 10px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: orange;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 300px;
+    height: 60px;
+}
+
+.sidefooter {
+    margin: 70px 50px 0px 0px;
+}
+
+.sidefooter p {
+    padding-bottom: 20px;
+}
+
+#footer-contact {
+    width: 400px;
+    margin: 50px 0px;
+}
+
+i {
+    cursor: pointer;
+}
+
+.mobile {
+  display: none;
+}
+
+.mobile-footer {
+    display: none;
+}
+
+.icon2 {
+    display: none;
+}
+
+#mobileP {
+    display: none;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+  .nav {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+  
+  /* .intro {
+    display: none;
+  } */
+
+  #sidebar ul li a {
+    position: relative;
+    color: black;
+    padding-left: 20px;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+  }
+
+  #sidebar a:hover {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color:cyan;
+  }
+
+  #sidebar {
+      display: block;
+      position: fixed;
+      z-index: 10;
+      width: 65%;
+      margin-right: -70%;
+      right: 0;
+      top: 0;
+      overflow-x: hidden;
+      transition: margin-right 0.5s ease;
+      background-color: white;
+      border-radius: 10px 0px 0px 10px;
+  }
+
+  #sidebar .side {
+      color: black;
+      text-align: right;
+      font-size: 50px;
+      line-height: 50px;
+      padding: 0px 15px;
+  }
+
+  #sidebar ul {
+      background-color: white;
+      width: 100%;
+      list-style: none;
+  }
+
+  #sidebar ul li {
+      line-height: 50px;
+      border-top: 1px solid black;
+  }
+
+  #menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 3px;
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes move {
+    0% {
+      right: 0px;
+    }
+
+    25% {
+      right: 5px;
+    }
+
+    50% {
+      right: 10px;
+    }
+
+    75% {
+      right: 15px;
+    }
+
+    100% {
+      right: 10px;
+    }
+  }
+
+  #no2 {
+    color: black;
+    cursor: pointer;
+  }
+
+
+  footer {
+    flex-direction: column;
+    /* background: blueviolet; */
+  }
+
+  #footer-contact {
+      width: 100%;
+      background-color: white;
+  }
+
+  .sidefooter {
+      background-color: white;
+      display: none;
+  }
+
+  .mobile-footer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: -80px;
+  }
+
+  .mobile-footer p {
+      padding: 10px;
+  }
+
+  .icon {
+      display: none;
+  }
+
+  .icon2 {
+      display: block;
+      margin: 20px;
+  }
+
+  #footer-contact p {
+      display: none;
+  }
+
+  #mobileP {
+      display: block;
+      margin: 0px 20px;
+  }
+
+  .pdf {
+    flex-direction: column;
+    /* background: cadetblue; */
+  }
+
+  .inputs p {
+    margin: 10px 0px;
+  }
+
+  .eachpdf {
+    width: 100%;
+    margin: 20px 0px;
+  }
+
+  select {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .inputs {
+    flex-direction: column;
+    /* background: yellowgreen; */
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .pagination {
+    display: none;
+  }
+
+  #maintain  {
+    width: 100%;
+    /* background: red; */
+    /* display: none; */
+  }
+
+
+  /* .inputs {
+    margin: 10px;
+    flex-direction: column;
+    background: red;
+    padding: 10px;
+  }
+
+  .inputs p {
+    margin: 10px 15px;
+  }
+
+  select {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .pdf {
+    flex-direction: column;
+    background: black;
+    margin: 0px;
+  }
+
+  .eachpdf {
+    width: 95%;
+    margin: 20px 10px;
+  }
+
+  .pagination {
+    width: 100%;
+    background: yellow;
+  } */
+
+  }

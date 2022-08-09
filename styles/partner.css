@@ -1,0 +1,605 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+#logo {
+  width: 200px;
+  height: 50px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+  }
+
+.nav {
+  width: 100%;
+  box-shadow: 0 0 10px lightgray;
+}
+
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.listitem {
+  list-style: none;
+  font-weight: bold;
+  position: relative;
+  padding: 1.5rem 0.3rem;
+  cursor: pointer;
+}
+
+.listitem::after {
+  content: '';
+  width: 0;
+  height: 0.3rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 0.3rem;
+  bottom: 0.8rem;
+  background-color: rgb(207, 6, 143);
+  transition: width 200ms ease-in-out;
+}
+
+.listitem:hover::after, .listitem:focus::after {
+  width: 80%;
+}
+
+.listitem:hover ul, .listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown {
+  position: absolute;
+  top: 4rem;
+  left: -1rem;
+  box-shadow: 0 0 10px lightgray;
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+  z-index: 2;
+
+}
+
+.dropdown li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.dropdown li:hover, .dropdown li:focus {
+  background-color: rgb(207, 6, 143);
+  color: white;
+}
+
+.dropdown li:hover span {
+    color: white;
+}
+
+  .intro{
+    background-image: url('../images/womenpartners.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 400px;
+    margin: 0px 0px;
+    object-fit: cover;
+  }
+
+  .intro p {
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    padding: 250px 0px 0px 30px;
+  }
+
+  .stick {
+    position: sticky;
+    top: 4rem;
+  }
+
+  .partner {
+    display: flex;
+    list-style-type: none;
+    padding: 10px 35px;
+    height: 60px;
+    background-color: rgba(199, 235, 235);
+  }
+
+  .partner li {
+    margin: 0px 5px;
+    padding: 10px;
+  }
+
+  .partner li:hover {
+    cursor: pointer;
+    color: rgb(8, 142, 204);
+    border-bottom:  5px solid rgb(8, 142, 204);
+  }
+
+  .partners-work {
+    margin: 40px;
+  }
+
+  /* p:only-of-type {
+    font-size: 17px;
+  } */
+
+  #tech-globe {
+    display: flex;
+    line-height: 1.7;
+    margin: 50px 0px;
+  }
+
+  #tech-globe ul {
+    margin: 0px 40px;
+  }
+
+  #employee {
+    width: 450px;
+    height: 450px;
+    margin-right: 30px;
+    border-radius: 30px 130px;
+    object-fit: cover;
+  }
+
+  .employer {
+    display: flex;
+    line-height: 1.6;
+  }
+
+  button {
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: rgb(8, 18, 56);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+    padding: 15px;
+  }
+
+  button:hover {
+      cursor: pointer;
+      background-color: rgb(6, 150, 207);
+  }
+
+  #location {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(6, 150, 207);
+    color: rgb(8, 18, 56);
+    font-size: 20px;
+    padding: 50px 30px;
+  }
+
+  #location p {
+    width: 450px;
+  }
+
+  .fund-partner p {
+    font-size: 18px;
+  }
+
+  .fund-partner img {
+    margin-left: 30px;
+    object-fit: cover;
+  }
+
+  .fund-partner {
+    display: flex;
+    line-height: 1.7;
+    margin: 50px 30px 70px 30px;
+  }
+
+  .partnersection {
+    margin: 30px;
+  }
+
+  .con img {
+    display: block;
+    width: 150px;
+    height: 150px; 
+    object-fit: cover;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    /* border-left: 1px solid lightgrey; */
+    padding: 10px;
+    margin: 3px;
+  }
+
+  .con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 20px 30px;
+  }
+
+  #locate {
+    background-color: rgb(8, 142, 204);
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    margin: 10px 0px;
+  }
+
+  #locate h3 {
+    width: 450px;
+  }
+
+  .develop {
+    margin: 40px;
+    display: flex;
+  }
+
+  .develop img {
+    width: 400px;
+    height: 400px;
+    margin-right: 30px;
+    object-fit: cover;
+  }
+
+  button {
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: rgb(8, 18, 56);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+    padding: 15px;
+  }
+
+  button:hover {
+      cursor: pointer;
+      background-color: rgb(6, 150, 207);
+  }
+
+  .pdf {
+    margin: 80px 10px 20px 10px;
+    display: flex;
+  }
+
+  .eachpdf {
+      width: 300px;
+      height: 400px;
+      margin: 20px;
+      box-shadow: 0 0 20px lightgray;
+      border-radius: 50px 10px 10px 10px;
+  }
+
+  .eachpdf img {
+      width: 100%;
+      height: 200px;
+      border-radius: 50px 10px;
+      margin: 0px 0px 20px 0px;
+      object-fit: cover;
+  }
+
+  .eachpdf h4, .eachpdf p {
+      padding: 10px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer img {
+      width: 300px;
+      height: 60px;
+  }
+
+  .sidefooter {
+      margin: 70px 50px 0px 0px;
+  }
+
+  .sidefooter p {
+      padding-bottom: 20px;
+  }
+
+  #footer-contact {
+      width: 400px;
+      margin: 50px 0px;
+  }
+
+  i {
+      cursor: pointer;
+  }
+
+  .mobile {
+    display: none;
+  }
+  
+  .mobile-footer {
+      display: none;
+  }
+  
+  .icon2 {
+      display: none;
+  }
+  
+  #mobileP {
+      display: none;
+  }
+  
+  
+  @media screen and (min-width: 320px) and (max-width: 576px) {
+  
+    .nav {
+      display: none;
+    }
+  
+    .mobile {
+      display: block;
+    }
+  
+    #sidebar ul li a {
+      position: relative;
+      color: black;
+      padding-left: 20px;
+      font-size: 18px;
+      display: block;
+      width: 100%;
+      border-left: 3px solid transparent;
+    }
+  
+    #sidebar a:hover {
+      color: cyan;
+      background: #1e1e1e;
+      border-left-color:cyan;
+    }
+  
+    #sidebar {
+        display: block;
+        position: fixed;
+        z-index: 10;
+        width: 65%;
+        margin-right: -70%;
+        right: 0;
+        top: 0;
+        overflow-x: hidden;
+        transition: margin-right 0.5s ease;
+        background-color: white;
+        border-radius: 10px 0px 0px 10px;
+    }
+  
+    #sidebar .side {
+        color: black;
+        text-align: right;
+        font-size: 50px;
+        line-height: 50px;
+        padding: 0px 15px;
+    }
+  
+    #sidebar ul {
+        background-color: white;
+        width: 100%;
+        list-style: none;
+    }
+  
+    #sidebar ul li {
+        line-height: 50px;
+        border-top: 1px solid black;
+    }
+  
+    #menu {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: black;
+      height: 40px;
+      width: 40px;
+      color: white;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 3px;
+      animation-name: move;
+      animation-duration: 1.5s;
+      animation-timing-function: ease;
+    }
+  
+    @keyframes move {
+      0% {
+        right: 0px;
+      }
+  
+      25% {
+        right: 5px;
+      }
+  
+      50% {
+        right: 10px;
+      }
+  
+      75% {
+        right: 15px;
+      }
+  
+      100% {
+        right: 10px;
+      }
+    }
+  
+    #no2 {
+      color: black;
+      cursor: pointer;
+    }
+  
+  
+    footer {
+      flex-direction: column;
+  }
+  
+  #footer-contact {
+      width: 100%;
+      background-color: white;
+  }
+  
+  .sidefooter {
+      background-color: white;
+      display: none;
+  }
+  
+  .mobile-footer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: -80px;
+  }
+  
+  .mobile-footer p {
+      padding: 10px;
+  }
+  
+  .icon {
+      display: none;
+  }
+  
+  .icon2 {
+      display: block;
+      margin: 20px;
+  }
+  
+  #footer-contact p {
+      display: none;
+  }
+  
+  #mobileP {
+      display: block;
+      margin: 0px 20px;
+  }
+
+  .stick {
+    top: 0rem;
+  }
+
+  .partner {
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(199, 235, 235);
+    height: 210px;
+  }
+
+  .partner li {
+    margin: 0px 5px;
+    padding: 20px 10px;
+  }
+
+  .partners-work {
+    margin: 20px 10px;
+  }
+
+  #tech-globe, .employer {
+    flex-direction: column;
+    line-height: 1.5;
+    /* margin: 20px 0px; */
+  }
+
+  #tech-globe ul {
+    margin: 0px 20px;
+  }
+
+  #employee {
+    width: 100%;
+    border-radius: 20px 0px;
+    margin-right: 0px;
+  }
+
+  #location {
+    flex-direction: column;
+    padding: 25px 15px;
+  }
+
+  #location p {
+    width: 100%;
+    margin: 30px 0px;
+  }
+
+  .fund-partner {
+    flex-direction: column;
+    line-height: 1.5;
+    margin: 30px 10px 40px 10px;
+  }
+
+  .fund-partner img {
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  #locate {
+    font-size: 17px;
+    padding: 20px 10px;
+    margin: 0px 0px;
+  }
+
+  #locate h3 {
+    width: 100%;
+  }
+
+  .develop {
+    margin: 20px 0px;
+    flex-direction: column;
+  }
+
+  .develop div {
+    margin: 20px 10px;
+  }
+
+  .develop img {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .pdf {
+    flex-direction: column;
+  }
+
+  .eachpdf {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .eachpdf img {
+    width: 100%;
+    border-radius: 50px 10px;
+    margin: 0px 0px 20px 0px;   
+  }
+
+  .con {
+    margin: 20px 10px;
+  }
+
+}

@@ -1,0 +1,571 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-image: url('../images/unsplash.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 500px;
+    margin: 0px 0px;
+    color: white;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.nav a:hover, #signed:hover {
+    color: rgb(232, 178, 28);
+    transition: color 500ms ease-out;
+}
+
+#signed {
+    border: 2px dotted rgb(232, 178, 28);
+    color: white;
+    padding: 10px;
+}
+
+#first {
+    display: flex;
+    align-items: center;
+}
+
+#second {
+    display: flex;
+    align-items: center;
+}
+
+.nav ol li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#start {
+    width: 150px;
+    height: 50px;
+    margin: 0px 20px;
+    background-color: white;
+    color: rgb(27, 106, 181);
+    border: none;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+#start:hover {
+    cursor: pointer;
+    background-color: rgb(27, 106, 181);
+    color: white;
+}
+
+.girls-change {
+    margin: 100px 0px 100px 50px;
+    width: 50%;
+}
+
+.girls-change h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+
+#judge {
+    width: 250px;
+    height: 60px;
+    border: none;
+    background-color:rgb(94, 181, 16) ;
+    color: white;
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+#judge:hover {
+    cursor: pointer;
+    background-color: rgb(67, 128, 13);
+}
+
+.movement {
+    margin: 30px 100px;
+}
+
+#onemove {
+    color: rgb(6, 13, 64);
+    width: 400px;
+    line-height: 1.5;
+}
+
+#twomoves {
+    color: rgb(6, 13, 64);
+    line-height: 1.5;
+    margin: 40px 0px;   
+    display: flex; 
+    justify-content: space-around;
+}
+
+#twomoves img {
+    width: 300px;
+    height: 350px;
+    margin: 30px 0px;
+    border-radius: 20px 80px;
+    object-fit: cover;
+}
+
+.firstmove, .secondmove {
+    width: 300px;
+}
+
+.twomoves ul li {
+    margin-left: 30px;
+}
+
+.center {
+    color: rgb(6, 13, 64);
+    text-align: center;
+}
+
+.role {
+    margin: 70px 30px;
+}
+
+section h1 {
+    text-align: center;
+    font-size: xx-large;
+    margin: 20px 0px;
+    color: rgb(6, 13, 64);
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.images h3 {
+    width: 150px;
+    height: 150px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.images :nth-child(1), .images :nth-child(3), .images :nth-child(5) {
+    border-radius: 0px 20px 20px 0px;
+    background-image: url('../images/tech.jpg');
+    background-size: 100% 100%;
+}
+
+.images :nth-child(2), .images :nth-child(4), .images :nth-child(6) {
+    border-radius: 20px 0px 0px 20px;
+    background-image: url('../images/cheer.jpg');
+    background-size: 100% 100%;
+}
+
+.change {
+    margin: 0px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.change div {
+    text-align: center;
+    width: 250px;
+}
+
+.change p {
+    font-size: 14px;
+}
+
+.change button {
+    border: none;
+    padding: 10px 25px;
+    background-color: rgb(76, 140, 20);
+    color: white;
+    border: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.change button:hover {
+    cursor: pointer;
+    background-color: rgb(50, 92, 13);
+}
+
+.dates {
+    color: white;
+    background-color: rgb(27, 106, 181);
+    margin: 40px 0px;
+    padding: 50px 40px;
+}
+
+.dates div {
+    margin-bottom: 20px;
+}
+
+.dates small {
+    color: rgb(242, 175, 29);
+}
+
+#community {
+    margin: 0px 40px 40px 40px;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+
+.but {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/4color.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+#judge {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color:rgb(217, 169, 13) ;
+    color: rgb(6, 13, 64);
+    border-radius: 5px;
+    font-size: larger;
+}
+
+#judge:hover {
+    cursor: pointer;
+    background-color: rgb(232, 178, 28);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer img {
+    width: 300px;
+    height: 60px;
+}
+
+.sidefooter {
+    margin: 70px 30px 0px 0px;
+}
+
+.icon {
+    margin: 70px 170px 0px 30px;
+}
+
+.sidefooter p {
+    padding-bottom: 20px;
+}
+
+i {
+    cursor: pointer;
+}
+
+
+footer small {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mobile, .mobile-footer, .icon2, #mobileP {
+    display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+    .nav {
+        display: none;
+      }
+  
+      .mobile {
+        display: block;
+      }
+
+      #sidebar ul li a {
+        position: relative;
+        color: black;
+        padding-left: 20px;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        border-left: 3px solid transparent;
+      }
+    
+      #sidebar a:hover {
+        color: cyan;
+        background: #1e1e1e;
+        border-left-color:cyan;
+      }
+    
+      #sidebar {
+          display: block;
+          position: fixed;
+          z-index: 10;
+          width: 65%;
+          margin-right: -70%;
+          right: 0;
+          top: 0;
+          overflow-x: hidden;
+          transition: margin-right 0.5s ease;
+          background-color: white;
+          border-radius: 10px 0px 0px 10px;
+      }
+    
+      #sidebar .side {
+          color: black;
+          text-align: right;
+          font-size: 50px;
+          line-height: 50px;
+          padding: 0px 15px;
+      }
+    
+      #sidebar ul {
+          background-color: white;
+          width: 100%;
+          list-style: none;
+      }
+    
+      #sidebar ul li {
+          line-height: 50px;
+          border-top: 1px solid black;
+      }
+  
+      #menu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: black;
+        height: 40px;
+        width: 40px;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 3px;
+        animation-name: move;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+      }
+    
+      @keyframes move {
+        0% {
+          right: 0px;
+        }
+    
+        25% {
+          right: 5px;
+        }
+  
+        50% {
+          right: 10px;
+        }
+  
+        75% {
+          right: 15px;
+        }
+    
+        100% {
+          right: 10px;
+        }
+      }
+    
+      #no2 {
+        color: black;
+        cursor: pointer;
+      }
+
+      .first-div, .flexlife {
+        flex-direction: column;
+      }
+
+      iframe {
+          width: 100%;
+      }
+
+      .second-div {
+          width: 100%;
+      }
+
+      #stats {
+        width: 100%;
+        height: 350px;
+        margin: 0 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-top: 90px;
+
+    }
+  
+    #footer-contact {
+        width: 100%;
+        background-color: white;
+    }
+  
+    .sidefooter {
+        background-color: white;
+        display: none;
+    }
+  
+    .mobile-footer {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -80px;
+    }
+  
+    .mobile-footer p {
+        padding: 10px;
+    }
+  
+    .icon {
+        display: none;
+    }
+  
+    .icon2 {
+        display: block;
+        margin: 20px;
+    }
+  
+    #footer-contact p {
+        display: none;
+    }
+  
+    #mobileP {
+        display: block;
+        margin: 0px 20px;
+    }
+
+    footer small {
+        display: none;
+    }
+
+    .girls-change {
+        padding: 70px 0px 30px 50px;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .girls-change h1 {
+        font-size: 40px;
+    }
+
+    .movement {
+        margin: 30px 10px;
+    }
+
+    #onemove {
+        width: 100%;
+    }
+    
+    #twomoves {
+        flex-direction: column;
+    }
+    
+    #twomoves img {
+        width: 100%;
+        border-radius: 20px 20px;
+    }
+    
+    .firstmove, .secondmove {
+        width: 100%;
+    }
+
+    .role {
+        margin: 50px 15px;
+    }
+
+    .role h1 {
+        font-size: 25px;
+    }
+
+    .images {
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+            'a b'
+            'c d'
+            'e f'
+        ;
+    }
+
+    .images :nth-child(1) {
+        grid-area: a;
+    }
+
+    .images :nth-child(2) {
+        grid-area: b;
+    }
+
+    .images :nth-child(3) {
+        grid-area: c;
+    }
+
+    .images :nth-child(4) {
+        grid-area: d;
+    }
+
+    .images :nth-child(5) {
+        grid-area: e;
+    }
+
+    .images :nth-child(6) {
+        grid-area: f;
+    }
+
+    .change {
+        flex-direction: column;
+    }
+
+    .dates {
+        padding: 25px 15px;
+    }
+
+    .change div {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    #community {
+        margin: 0px 10px 30px 10px;
+    }
+
+} 

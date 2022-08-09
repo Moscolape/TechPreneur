@@ -1,0 +1,618 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+#logo {
+  width: 200px;
+  height: 50px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+  }
+
+.nav {
+  width: 100%;
+  box-shadow: 0 0 10px lightgray;
+}
+
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.listitem {
+  list-style: none;
+  font-weight: bold;
+  position: relative;
+  padding: 1.5rem 0.3rem;
+  cursor: pointer;
+}
+
+.listitem::after {
+  content: '';
+  width: 0;
+  height: 0.3rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 0.3rem;
+  bottom: 0.8rem;
+  background-color: rgb(207, 6, 143);
+  transition: width 200ms ease-in-out;
+}
+
+.listitem:hover::after, .listitem:focus::after {
+  width: 80%;
+}
+
+.listitem:hover ul, .listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown {
+  position: absolute;
+  top: 4rem;
+  left: -1rem;
+  box-shadow: 0 0 10px lightgray;
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+  z-index: 2;
+
+}
+
+.dropdown li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.dropdown li:hover, .dropdown li:focus {
+  background-color: rgb(207, 6, 143);
+  color: white;
+}
+
+.dropdown li:hover span {
+    color: white;
+}
+
+  .intro{
+    background-image: url('../images/conf.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 400px;
+    margin: 0px 0px;
+  }
+
+  .intro p {
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    padding: 250px 0px 0px 30px;
+  }
+
+  main {
+    margin: 100px 0px;
+    padding: 0px 30px;
+  }
+
+  .percent {
+    display: flex;
+    margin: 0px 50px 0px 50px;
+  }
+
+  .percent-child {
+      margin: 0px 20px;
+      text-align: center;
+  }
+
+  .percent-child h2 {
+      font-size: 40px;
+      padding: 60px 40px;
+      border: 10px solid rgb(67, 80, 102);
+      margin: 20px;
+      border-radius: 50%;
+      color: rgb(52, 104, 235);
+  }
+
+  #firsthead {
+      border: 10px solid skyblue;
+  }
+
+  #secondhead {
+      border: 10px solid rgb(6, 13, 64);
+  }
+
+  #locate {
+    background-color: rgb(6, 150, 207);
+    color: rgb(8, 18, 56);
+    /* height: 300px; */
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  #locate p {
+    width: 450px;
+  }
+
+  .alumni {
+    margin: 30px 0px 50px 30px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.7;
+    font-size: 18px;
+  }
+
+  #alum {
+    width: 450px;
+    margin: 0px 30px 0px 0px;
+  }
+
+  .alumni img {
+    width: 450px;
+    height: 270px;
+    object-fit: cover;
+
+  }
+
+  /* OUTER CONTAINER */
+  .s-wrap {
+    width: 100%;
+    height: 500px; /* Optional */
+    overflow: hidden; /* Hide scrollbars */
+    padding-top: 0px;
+    margin-top: -10px;
+  }
+      
+  /* MIDDLE WRAPPER */
+  .s-move {
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+      
+   /* SLIDES */
+   .slide {
+     box-sizing: border-box;
+     padding: 0px;
+     text-align: left;
+     /* Force all slides to layout horizontally */
+     width: 100%;
+     flex-shrink: 0;
+     height: 400px;
+   }
+   
+   .slide p{
+     position: absolute;
+     top: 8rem;
+     color:black;
+     margin: 0px 0px 0px 50px;
+     padding: 70px;
+     width: 350px;
+     height: 350px;
+     border-radius: 50%;
+     background-color: rgba(119, 168, 50, 0.95);
+   }
+      
+    /* SLIDE ANIMATION  */
+  @keyframes slideh { 
+      0% { right: 0; }
+      20% { right: 0; }
+      40% { right: 100%; }
+      55% { right: 100%; }
+      70% { right: 200%; }
+      85% { right: 200%; }
+      100% { right: 0; }
+  }
+  
+  .s-move { 
+      animation: slideh linear 15s infinite;
+  }
+  .s-move:hover { 
+      animation-play-state: paused; 
+  }
+
+  .reps {
+    margin: 100x;
+  }
+
+  #research {
+    font-size: 20px;
+    padding: 0px 30px;
+  }
+
+  .pdf {
+    margin: 30px;
+    display: flex;
+  }
+
+  .eachpdf {
+      width: 300px;
+      height: 520px;
+      margin: 20px;
+      box-shadow: 0 0 10px lightgray;
+      border-radius: 50px 10px 10px 10px;
+  }
+
+  .eachpdf img {
+      width: 100%;
+      height: 200px;
+      border-radius: 50px 10px;
+      object-fit: cover;
+
+  }
+
+  .eachpdf h4, .eachpdf p {
+      padding: 10px;
+  }
+
+  #location {
+    background-color: rgb(6, 150, 207);
+    color: white;
+    /* height: 190px; */
+    font-size: 20px;
+    padding: 50px 30px;
+  }
+
+  #location p {
+    width: 450px;
+  }
+
+  .percent {
+    display: flex;
+    margin: 30px 100px 50px 50px;
+  }
+
+  .percent-child {
+      margin: 0px 20px;
+      text-align: center;
+  }
+
+  .percent-child h2 {
+      font-size: 40px;
+      padding: 60px 40px;
+      border: 10px solid orangered;
+      margin: 20px;
+      border-radius: 50%;
+      color: rgb(52, 104, 235);
+  }
+
+  #firsthead {
+      border: 10px solid rgb(237, 186, 57);
+  }
+
+  #secondhead {
+      border: 10px solid rgb(6, 13, 64);
+  }
+
+  #small {
+    margin: 0px 30px;
+  }
+
+  .programs {
+    margin: 30px 10px 100px 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .support, .run {
+      width: 500px;
+      height: 230px;
+      color: rgb(8, 18, 56);
+      margin: 20px;
+  }
+
+  button {
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: rgb(8, 18, 56);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 350px;
+    padding: 15px;
+  }
+
+  button:hover {
+      cursor: pointer;
+      background-color: rgb(6, 150, 207);
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+
+    /* this was added because of the slide*/
+    margin-top: -100px;
+  }
+
+  footer img {
+      width: 300px;
+      height: 60px;
+  }
+
+  .sidefooter {
+      margin: 70px 50px 0px 0px;
+  }
+
+  .sidefooter p {
+      padding-bottom: 20px;
+  }
+
+  #footer-contact {
+      width: 400px;
+      margin: 50px 0px;
+  }
+
+  i {
+      cursor: pointer;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .mobile-footer {
+      display: none;
+  }
+
+  .icon2 {
+      display: none;
+  }
+
+  #mobileP {
+      display: none;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 576px) {
+    .nav {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+
+    #sidebar ul li a {
+      position: relative;
+      color: black;
+      padding-left: 20px;
+      font-size: 18px;
+      display: block;
+      width: 100%;
+      border-left: 3px solid transparent;
+    }
+  
+    #sidebar a:hover {
+      color: cyan;
+      background: #1e1e1e;
+      border-left-color:cyan;
+    }
+  
+    #sidebar {
+        display: block;
+        position: fixed;
+        z-index: 10;
+        width: 65%;
+        margin-right: -70%;
+        right: 0;
+        top: 0;
+        overflow-x: hidden;
+        transition: margin-right 0.5s ease;
+        background-color: white;
+        border-radius: 10px 0px 0px 10px;
+    }
+  
+    #sidebar .side {
+        color: black;
+        text-align: right;
+        font-size: 50px;
+        line-height: 50px;
+        padding: 0px 15px;
+    }
+  
+    #sidebar ul {
+        background-color: white;
+        width: 100%;
+        list-style: none;
+    }
+  
+    #sidebar ul li {
+        line-height: 50px;
+        border-top: 1px solid black;
+    }
+
+    #menu {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: black;
+      height: 40px;
+      width: 40px;
+      color: white;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 3px;
+      animation-name: move;
+      animation-duration: 1.5s;
+      animation-timing-function: ease;
+      z-index: 100;
+    }
+  
+    @keyframes move {
+      0% {
+        right: 0px;
+      }
+  
+      25% {
+        right: 5px;
+      }
+
+      50% {
+        right: 10px;
+      }
+
+      75% {
+        right: 15px;
+      }
+  
+      100% {
+        right: 10px;
+      }
+    }
+  
+    #no2 {
+      color: black;
+      cursor: pointer;
+    }
+
+
+    footer {
+      flex-direction: column;
+  }
+
+  #footer-contact {
+      width: 100%;
+      background-color: white;
+  }
+
+  .sidefooter {
+      background-color: white;
+      display: none;
+  }
+
+  .mobile-footer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: -80px;
+  }
+
+  .mobile-footer p {
+      padding: 10px;
+  }
+
+  .icon {
+      display: none;
+  }
+
+  .icon2 {
+      display: block;
+      margin: 20px;
+  }
+
+  #footer-contact p {
+      display: none;
+  }
+
+  #mobileP {
+      display: block;
+      margin: 0px 20px;
+  }
+
+  main {
+    margin: 40px 0px;
+    padding: 0px 15px;
+  }
+
+  .percent {
+    flex-direction: column;
+    margin: 0px 15px;
+  }
+
+  #locate, #location {
+    font-size: 17px;
+    padding: 20px;
+  }
+
+  #locate p, #location p {
+    width: 100%;
+  }
+
+  .alumni {
+    margin: 30px 10px;
+    line-height: 1.5;
+    font-size: 16px;
+    flex-direction: column;
+  }
+
+  #alum, iframe {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  .alumni img {
+    width: 100%;
+    height: 270px;
+  }
+
+  #research {
+    padding: 0 15px;
+    font-size: 17px;
+  }
+
+  .pdf {
+    margin: 15px;
+    flex-direction: column;
+  }
+
+  .eachpdf {
+      width: 100%;
+      height: 520px;
+      margin: 10px 0px;
+  }
+
+  #small {
+    margin: 30px 10px;
+  }
+
+  .programs {
+    margin: 30px 10px 100px 10px;
+    flex-direction: column;
+  }
+
+  .support, .run {
+      width: 100%;
+      height: 300px;
+      margin: 40px 10px;
+  }
+
+  button {
+    width: 95%;
+  }
+
+
+  }

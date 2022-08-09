@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/admindashboard.css">
+    <link rel="shortcut icon" href="./images/comp.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>My Dashboard | Techpreneur</title>
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <div>
+                <span class="slide">
+                    <a href="#" id="open">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a href="#" id="close">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </span>
+            </div>
+            <div class="slide">
+                <i class="fa fa-bell-o"></i>
+            </div>
+        </div>
+        <div id="menu" class="nav">
+            <div id="dash">
+                <img src="./images/mosco.png" alt="">
+                <a href="#" class="close">
+                    Dashboard
+                </a>
+            </div>
+            <a href="#" class="item">
+                <i class="fa fa-registered icon"></i>Registration
+            </a>
+            <a href="#" class="item">
+                <i class="fa fa-spinner icon"></i>Status
+            </a>
+            <a href="#" class="item">
+                <i class="fa fa-car icon"></i>Deliverables
+            </a>
+            <a href="#" class="item last">
+                <i class="fa fa-user-circle icon"></i>Profile
+            </a>
+        </div>
+
+        <div id="main">
+            <h1>Slide-in animated sidebar tutorial mmmmmmmmmmmjjh</h1>
+        </div>
+        
+    </div>
+
+
+
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let sidenav = document.getElementById('menu');
+        let section = document.getElementById('content');
+
+        open.addEventListener('click', () => {
+            if (sidenav.style.width = '0') {
+                sidenav.style.width = '250px';
+                section.style.marginLeft = '250px'; 
+                close.style.display = 'inline';
+                open.style.display = 'none';
+                document.getElementById('header').style.width = '72%';
+                document.getElementById('main').style.width = '72%';
+            } 
+        })
+
+        close.addEventListener('click', () => {
+            if (sidenav.style.width = '250px') {
+                sidenav.style.width = '0';
+                section.style.marginLeft = '0'; 
+                close.style.display = 'none';
+                open.style.display = 'inline';
+                document.getElementById('header').style.width = '100%';
+                document.getElementById('main').style.width = '100%';
+            } 
+        })
+
+    </script>
+</body>
+</html>

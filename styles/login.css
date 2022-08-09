@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px black;
+}
+
+.nav a:hover, #signed:hover {
+    color: rgb(232, 178, 28);
+    transition: color 500ms ease-out;
+}
+
+#signed {
+    border: 2px dotted rgb(232, 178, 28);
+    color: white;
+    padding: 10px;
+}
+
+
+#first {
+    display: flex;
+    align-items: center;
+}
+
+#second {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+#start {
+    width: 150px;
+    height: 50px;
+    margin: 0px 20px;
+    background-color: white;
+    color: rgb(27, 106, 181);
+    border: none;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+#start:hover {
+    cursor: pointer;
+    background-color: rgb(27, 106, 181);
+    color: white;
+    transition: background-color 500ms ease-out;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    width: 500px;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 0 20px lightgray;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+.inputBox {
+    position: relative;
+    width: 90%;
+    z-index: -200;
+}
+
+#see {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+    display: none;
+}
+
+#hide {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+}
+
+#see:hover, #hide:hover {
+    cursor: pointer;
+}
+
+.inputBox input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: 500ms;
+}
+
+.inputBox input:valid ~ span, .inputBox input:focus ~ span {
+    color: rgb(232, 178, 28);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.8em;
+    padding: 0 10px;
+    background: white;
+    border-left: 1px solid rgb(232, 178, 28);
+    border-right: 1px solid rgb(232, 178, 28);
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+}
+
+.inputBox input:valid, .inputBox input:focus {
+    border: 1px solid rgb(232, 178, 28);
+    outline: none;
+}
+
+#log {
+    align-self: flex-start;
+    margin-left: 25px;
+    width: 100px;
+    padding: 5px 20px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    transition: 500ms;
+    border: none;
+}
+
+#log:hover {
+    cursor: pointer;
+    color: rgb(232, 178, 28);
+}
+
+.account {
+    align-self: flex-start;
+    margin-left: 25px;   
+}
+
+.account a {
+    color: rgb(232, 178, 28);
+}
+
+.account a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 13px;
+    transition: 400ms;
+}
+
+.para {
+    display: flex;
+    margin: 5px 0px;
+}
+
+footer p:only-of-type {
+    color: lightslategray;
+}
+
+.para :nth-child(2) {
+    padding: 0px 5px;
+    margin: 0px 5px;
+    border-left: 1px solid lightslategray;
+    border-right: 1px solid lightslategray;
+}
+
+.icon i{
+    transition: 400ms;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.para p:hover {
+    cursor: pointer;
+    color: rgb(232, 178, 28);
+}
+
+.icon :nth-child(1):hover, .icon :nth-child(4):hover {
+    cursor: pointer;
+    color: rgb(15, 150, 217);
+    border: 2px solid rgb(15, 150, 217);
+}
+
+.icon :nth-child(5):hover {
+    cursor: pointer;
+    color: red;
+    border: 2px solid red;
+}
+
+.icon :nth-child(3):hover {
+    cursor: pointer;
+    color: rgb(14, 77, 171);
+    border: 2px solid rgb(14, 77, 171);
+}
+
+.icon :nth-child(2):hover {
+    cursor: pointer;
+    color: orangered;
+    border: 2px solid orangered;
+}
+
+.mobile {
+    display: none;
+  }
+
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .nav {
+        display: none;
+      }
+  
+      .mobile {
+        display: block;
+      }
+
+      #sidebar ul li a {
+        position: relative;
+        color: black;
+        padding-left: 20px;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        border-left: 3px solid transparent;
+      }
+    
+      #sidebar a:hover {
+        color: cyan;
+        background: #1e1e1e;
+        border-left-color:cyan;
+      }
+    
+      #sidebar {
+          display: block;
+          position: fixed;
+          z-index: 10;
+          width: 65%;
+          margin-right: -70%;
+          right: 0;
+          top: 0;
+          overflow-x: hidden;
+          transition: margin-right 0.5s ease;
+          background-color: white;
+          border-radius: 10px 0px 0px 10px;
+      }
+    
+      #sidebar .side {
+          color: black;
+          text-align: right;
+          font-size: 50px;
+          line-height: 50px;
+          padding: 0px 15px;
+      }
+    
+      #sidebar ul {
+          background-color: white;
+          width: 100%;
+          list-style: none;
+      }
+    
+      #sidebar ul li {
+          line-height: 50px;
+          border-top: 1px solid black;
+      }
+  
+      #menu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: black;
+        height: 40px;
+        width: 40px;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 3px;
+        animation-name: move;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+      }
+    
+      @keyframes move {
+        0% {
+          right: 0px;
+        }
+    
+        25% {
+          right: 5px;
+        }
+  
+        50% {
+          right: 10px;
+        }
+  
+        75% {
+          right: 15px;
+        }
+    
+        100% {
+          right: 10px;
+        }
+      }
+    
+      #no2 {
+        color: black;
+        cursor: pointer;
+      }
+
+      .form {
+        width: 90%;
+        margin: 70px auto;
+        box-shadow: 0 0 10px lightgrey;
+      }
+
+      #log {
+        margin-left: 5%;
+      }
+
+      footer {
+          position: absolute;
+          bottom: 2rem;
+          width: 100%;
+          margin: auto;
+      }
+
+      .account {
+          font-size: 14px;
+          margin-left: 5%;
+      }
+
+
+  
+}

@@ -1,0 +1,611 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header {
+    background-image: url('../images/cheer.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 650px;
+    margin: 0px 0px;
+    color: white;
+} */
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px black;
+    z-index: 3;
+}
+
+.nav a:hover, #signed:hover {
+    color: rgb(232, 178, 28);
+    transition: color 500ms ease-out;
+}
+
+#signed {
+    border: 2px dotted rgb(232, 178, 28);
+    color: white;
+    padding: 10px;
+}
+
+
+#first {
+    display: flex;
+    align-items: center;
+}
+
+#second {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* a:hover {
+    cursor: pointer;
+} */
+
+
+#start {
+    width: 150px;
+    height: 50px;
+    margin: 0px 20px;
+    background-color: white;
+    color: rgb(27, 106, 181);
+    border: none;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+#start:hover {
+    cursor: pointer;
+    background-color: rgb(27, 106, 181);
+    color: white;
+    transition: background-color 500ms ease-out;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+
+h2 {
+    text-align: center;
+    border-top: 3px solid lightslategray;
+    border-bottom: 3px solid lightslategray;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+h3, h4 {
+    align-self: flex-start;
+}
+
+#formed, #form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    width: 800px;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 0 20px lightgray;
+    border-radius: 5px;
+    margin: 30px auto;
+    padding: 40px;
+    transition: 500ms;
+}
+
+#formed {
+    display: none;
+    position: relative;
+    /* top: 80px; */
+}
+
+
+.inputBox {
+    position: relative;
+    width: 30%;
+    z-index: 1;
+}
+
+.inputBoxed {
+    position: relative;
+    width: 90%;
+    z-index: 1;
+    align-self: flex-start;
+}
+
+#see, #see2 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+    display: none;
+}
+
+#hide, #hide2 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+}
+
+#see:hover, #hide:hover, #see2:hover, #hide2:hover {
+    cursor: pointer;
+}
+
+.names {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.named {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.named div {
+    margin: 10px 0px;
+}
+
+.date {
+    width: 100%;
+}
+
+#date {
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0px;
+}
+
+/* input:checked {
+    background-color: black;
+    width: 18px;
+    height: 18px;
+} */
+
+.inputBox input, .inputBoxed input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.inputBox span, .inputBoxed span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: lightslategray;
+    transition: 500ms;
+}
+
+.inputBox input:valid ~ span, .inputBox input:focus ~ span, .inputBoxed input:focus ~ span, .inputBoxed input:valid ~ span {
+    color: rgb(232, 178, 28);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.8em;
+    padding: 0 10px;
+    background: white;
+    border-left: 1px solid rgb(232, 178, 28);
+    border-right: 1px solid rgb(232, 178, 28);
+    letter-spacing: 0.1em;
+}
+
+.inputBox input:valid, .inputBox input:focus, .inputBoxed input:valid, .inputBoxed input:focus {
+    border: 1px solid rgb(232, 178, 28);
+    outline: none;
+}
+
+.inputBoxed + small {
+    display: none;
+    align-self: flex-start;
+    margin-top: -20px;
+    color: red;
+}
+
+#smallie {
+    display: none;
+}
+
+#see {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+    display: none;
+}
+
+#hide {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+}
+
+
+#privacy {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+#check, #checked {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#log {
+    align-self: flex-end;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    transition: 500ms;
+    border: none;
+    border-radius: 5px;
+}
+
+#logs {
+    align-self: flex-start;
+    width: 150px;
+    height: 60px;
+    padding-left: 30px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    transition: 500ms;
+    border: none;
+    border-radius: 5px;
+    clip-path: polygon(24% 13%, 100% 13%, 100% 87%, 25% 87%, 9% 53%);
+    margin-left: -10px;
+}
+
+#logged {
+    /* align-self: flex-end; */
+    align-self: center;
+    width: 150px;
+    padding: 0px 40px;
+    height: 45px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    transition: 500ms;
+    border: none;
+    border-radius: 5px; 
+}
+
+#log:hover, #logged:hover, #logs:hover {
+    cursor: pointer;
+    color: rgb(232, 178, 28);
+}
+
+.account {
+    align-self: flex-start;
+    margin-left: 25px;   
+}
+
+.account a {
+    color: rgb(232, 178, 28);
+}
+
+.account a:hover {
+    text-decoration: underline;
+}
+
+.para :nth-child(2) {
+    padding: 0px 5px;
+    margin: 0px 5px;
+    border-left: 1px solid lightslategray;
+    border-right: 1px solid lightslategray;
+}
+
+.icon i{
+    transition: 400ms;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.para p:hover {
+    cursor: pointer;
+    color: rgb(232, 178, 28);
+}
+
+.icon :nth-child(1):hover, .icon :nth-child(4):hover {
+    cursor: pointer;
+    color: rgb(15, 150, 217);
+    border: 2px solid rgb(15, 150, 217);
+}
+
+.icon :nth-child(5):hover {
+    cursor: pointer;
+    color: red;
+    border: 2px solid red;
+}
+
+.icon :nth-child(3):hover {
+    cursor: pointer;
+    color: rgb(14, 77, 171);
+    border: 2px solid rgb(14, 77, 171);
+}
+
+.icon :nth-child(2):hover {
+    cursor: pointer;
+    color: orangered;
+    border: 2px solid orangered;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+footer p {
+    font-size: 13px;
+    transition: 400ms;
+}
+
+.para {
+    display: flex;
+    margin: 5px 0px;
+}
+
+#yes {
+    align-self: flex-start; width: 65%;
+}
+
+footer p:only-of-type {
+    color: lightslategray;
+}
+
+.mobile, #no {
+    display: none;
+  }
+
+  
+  #smallSecond{
+    display: none;
+}
+
+#smallThird {
+    color: green;
+    align-self: flex-start;
+    margin-top: -20px;
+    display: none;
+}
+
+#smallFourth {
+    color: grey;
+    align-self: flex-start;
+    margin-top: -20px;
+    display: block;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .nav {
+        display: none;
+      }
+  
+      .mobile {
+        display: block;
+      }
+
+      #sidebar ul li a {
+        position: relative;
+        color: black;
+        padding-left: 20px;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        border-left: 3px solid transparent;
+      }
+    
+      #sidebar a:hover {
+        color: cyan;
+        background: #1e1e1e;
+        border-left-color:cyan;
+      }
+    
+      #sidebar {
+          display: block;
+          position: fixed;
+          z-index: 10;
+          width: 65%;
+          margin-right: -70%;
+          right: 0;
+          top: 0;
+          overflow-x: hidden;
+          transition: margin-right 0.5s ease;
+          background-color: white;
+          border-radius: 10px 0px 0px 10px;
+      }
+    
+      #sidebar .side {
+          color: black;
+          text-align: right;
+          font-size: 50px;
+          line-height: 50px;
+          padding: 0px 15px;
+      }
+    
+      #sidebar ul {
+          background-color: white;
+          width: 100%;
+          list-style: none;
+      }
+    
+      #sidebar ul li {
+          line-height: 50px;
+          border-top: 1px solid black;
+      }
+  
+      #menu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: black;
+        height: 40px;
+        width: 40px;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 3px;
+        animation-name: move;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+        z-index: 100;
+      }
+    
+      @keyframes move {
+        0% {
+          right: 0px;
+        }
+    
+        25% {
+          right: 5px;
+        }
+  
+        50% {
+          right: 10px;
+        }
+  
+        75% {
+          right: 15px;
+        }
+    
+        100% {
+          right: 10px;
+        }
+      }
+    
+      #no2 {
+        color: black;
+        cursor: pointer;
+      }
+
+      form {
+        margin: 70px 0;
+      }
+
+      #form, #formed {
+        width: 95%;
+        margin: 30px auto;
+        padding: 20px 10px;
+        box-shadow: 0 0 10px lightgray;
+      }
+
+      #formed {
+        margin-top: -50px;
+      }
+
+      .names, .named {
+        flex-direction: column;
+      }
+
+      .inputBox, .inputBoxed {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      #no {
+        display: none;
+    }
+
+    #yes {
+        width: 100%;
+    }
+
+    #log {
+        align-self: flex-start;
+    }
+
+    .inputBoxed + small, #smallFourth, #smallThird {
+        margin-top: -40px;
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 396px) {
+    #logs, #logged {
+        width: 100px;
+    }
+
+    #logs {
+        padding-left: 20px;
+    }
+
+    #logged {
+        padding: 0px;
+    }
+
+}
+
+@media screen and (min-width: 335px) and (max-width: 356px) {
+    #privacy {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 334px) {
+    #privacy {
+        font-size: 12px;
+    }
+
+}

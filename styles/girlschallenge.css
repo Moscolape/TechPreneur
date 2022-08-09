@@ -1,0 +1,508 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-image: url('../images/chal.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 820px;
+    margin: 0px;
+    color: white;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.nav a:hover, #signed:hover {
+    color: rgb(232, 178, 28);
+    transition: color 500ms ease-out;
+}
+
+#signed {
+    border: 2px dotted rgb(232, 178, 28);
+    color: white;
+    padding: 10px;
+}
+
+
+#first {
+    display: flex;
+    align-items: center;
+}
+
+#second {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+ body :not(h1)::selection {
+    color: rgb(232, 178, 28);
+    background-color: white;
+}
+
+#start {
+    width: 150px;
+    height: 50px;
+    margin: 0px 20px;
+    background-color: white;
+    color: rgb(27, 106, 181);
+    border: none;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+#start:hover {
+    cursor: pointer;
+    background-color: rgb(27, 106, 181);
+    color: white;
+    transition: background-color 500ms ease-out;
+}
+
+.girls-change {
+    margin: 100px 0px 100px 50px;
+    width: 50%;
+}
+
+.girls-change h1 {
+    font-size: 80px;
+}
+
+#judge {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color:rgb(94, 181, 16) ;
+    color: white;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+#judge:hover {
+    cursor: pointer;
+    background-color: rgb(67, 128, 13);
+    transition: background-color 500ms ease-out;
+}
+
+.finals {
+    background-image: url('../images/4color.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    padding:65px 50px;
+    margin: 0px;
+    color: white;
+}
+
+.bigreen {
+    background-image: url('../images/greenb.png');
+    background-size: 100% 100%;
+    width: 100%;
+    padding: 65px 30px;
+    margin: 0px;
+    color: white;   
+}
+
+.finals h1, .bigreen h1, .lives h1, .chapters h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.finals button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    padding: 0px 15px;
+    background-color:rgb(214, 34, 169) ;
+    color: white;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+.finals button:hover {
+    cursor: pointer;
+    background-color: rgb(153, 21, 120);
+    transition: background-color 500ms ease-out;
+}
+
+.lives {
+    margin: 50px 40px;
+    line-height: 1.7;
+}
+
+#stats {
+    width: 400px;
+    height: 350px;
+    margin: 0 50px 0 0;
+}
+
+#impact {
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: rgb(8, 121, 166);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+    padding: 15px;
+}
+
+#impact:hover {
+    cursor: pointer;
+    background-color: rgb(5, 93, 128);
+    transition: background-color 500ms ease-out;
+}
+
+.flexlife {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chapters {
+    background-color: rgb(119, 207, 242);
+    padding: 40px 30px;
+    line-height: 1.7;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+
+.join {
+    background-image: url('../images/bluecombo.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    padding: 30px;
+    color: white;  
+    text-align: center;
+}
+
+#sign {
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color:rgb(217, 169, 13) ;
+    color: white;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+#sign:hover {
+    cursor: pointer;
+    background-color: rgb(232, 178, 28);
+    color: rgb(7, 88, 135);
+    transition: background-color 500ms ease-out;
+    transition: color 500ms ease-out;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer img {
+    width: 300px;
+    height: 60px;
+}
+
+.sidefooter {
+    margin: 70px 30px 0px 0px;
+}
+
+.icon {
+    margin: 70px 170px 0px 30px;
+}
+
+.sidefooter p {
+    padding-bottom: 20px;
+}
+
+i {
+    cursor: pointer;
+}
+
+
+small {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mobile, .mobile-footer, .icon2, #mobileP {
+    display: none;
+}
+
+
+.first-div {
+    display: flex; justify-content: space-between;
+}
+
+.second-div {
+    width: 450px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+    .nav {
+        display: none;
+      }
+  
+      .mobile {
+        display: block;
+      }
+
+      #sidebar ul li a {
+        position: relative;
+        color: black;
+        padding-left: 20px;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        border-left: 3px solid transparent;
+      }
+    
+      #sidebar a:hover {
+        color: cyan;
+        background: #1e1e1e;
+        border-left-color:cyan;
+      }
+    
+      #sidebar {
+          display: block;
+          position: fixed;
+          z-index: 10;
+          width: 65%;
+          margin-right: -70%;
+          right: 0;
+          top: 0;
+          overflow-x: hidden;
+          transition: margin-right 0.5s ease;
+          background-color: white;
+          border-radius: 10px 0px 0px 10px;
+      }
+    
+      #sidebar .side {
+          color: black;
+          text-align: right;
+          font-size: 50px;
+          line-height: 50px;
+          padding: 0px 15px;
+      }
+    
+      #sidebar ul {
+          background-color: white;
+          width: 100%;
+          list-style: none;
+      }
+    
+      #sidebar ul li {
+          line-height: 50px;
+          border-top: 1px solid black;
+      }
+  
+      #menu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: black;
+        height: 40px;
+        width: 40px;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 3px;
+        animation-name: move;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+      }
+    
+      @keyframes move {
+        0% {
+          right: 0px;
+        }
+    
+        25% {
+          right: 5px;
+        }
+  
+        50% {
+          right: 10px;
+        }
+  
+        75% {
+          right: 15px;
+        }
+    
+        100% {
+          right: 10px;
+        }
+      }
+    
+      #no2 {
+        color: black;
+        cursor: pointer;
+      }
+
+      .first-div, .flexlife {
+        flex-direction: column;
+      }
+
+      iframe {
+          width: 100%;
+      }
+
+      .second-div {
+          width: 100%;
+      }
+
+      #stats {
+        width: 100%;
+        height: 350px;
+        margin: 0 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-top: 90px;
+
+    }
+  
+    #footer-contact {
+        width: 100%;
+        background-color: white;
+    }
+  
+    .sidefooter {
+        background-color: white;
+        display: none;
+    }
+  
+    .mobile-footer {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -80px;
+    }
+  
+    .mobile-footer p {
+        padding: 10px;
+    }
+  
+    .icon {
+        display: none;
+    }
+  
+    .icon2 {
+        display: block;
+        margin: 20px;
+    }
+  
+    #footer-contact p {
+        display: none;
+    }
+  
+    #mobileP {
+        display: block;
+        margin: 0px 20px;
+    }
+
+    small {
+        display: none;
+    }
+
+    .finals h1, .bigreen h1, .lives h1, .chapters h1, .girls-change h1 {
+        font-size: 35px;
+    }
+
+    .girls-change {
+        margin: 0px 10px 0px 10px;
+        padding: 70px 0 0 0;
+        width: 95%;
+    }
+
+    .finals, .bigreen, .chapters {
+        padding: 25px 15px;
+    }
+
+    .lives {
+        margin: 25px 15px;
+    }    
+}
+
+@media screen and (min-width: 320px) and (max-width: 389px) {
+    header {
+        height: 720px;
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 395px) {
+    header {
+        height: 680px;
+    }
+}
+
+@media screen and (min-width: 396px) and (max-width: 405px) {
+    header {
+        height: 640px;
+    }
+}
+
+@media screen and (min-width: 406px) and (max-width: 430px) {
+    header {
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 450px) {
+    header {
+        height: 570px;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 510px) {
+    header {
+        height: 540px;
+    }
+}
+
+@media screen and (min-width: 511px) and (max-width: 576px) {
+    header {
+        height: 520px;
+    }
+}
