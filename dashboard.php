@@ -21,7 +21,7 @@ session_start();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>My Dashboard | Techpreneur</title>
+    <title>Admin Dashboard | Techpreneur</title>
 </head>
 <body>
 
@@ -38,7 +38,6 @@ session_start();
                 </span>
                 <small class='small'><?php echo $user_data['students_username'];?></small>
 
-                <!-- style='font-size: 30px; padding-left: 10px' -->
             </div>
             <div class="slide">
                 <i class="fa fa-bell-o"></i>
@@ -93,45 +92,9 @@ session_start();
     </div>
 
 
-    <script>
-        let open = document.getElementById('open');
-        let close = document.getElementById('close');
-        let sidenav = document.getElementById('menu');
-        let section = document.getElementById('content');
-        let notice = document.getElementById("myForm");
-
-        open.addEventListener('click', () => {
-            if (sidenav.style.width = '0') {
-                sidenav.style.width = '250px';
-                section.style.marginLeft = '250px'; 
-                close.style.display = 'inline';
-                open.style.display = 'none';
-                document.getElementById('header').style.width = 'calc(100% - 290px)';
-                document.getElementById('main').style.width = 'calc(100% - 290px)';
-            } 
-        })
-
-        close.addEventListener('click', () => {
-            if (sidenav.style.width = '250px') {
-                sidenav.style.width = '0';
-                section.style.marginLeft = '0'; 
-                close.style.display = 'none';
-                open.style.display = 'inline';
-                document.getElementById('header').style.width = '95%';
-                document.getElementById('main').style.width = '95%';
-            } 
-        })
-
-        function closeNotice() {
-            notice.style.display = "none";
-        }
-
-        function openNotice() {
-            notice.style.display = "block";
-
-        }
-
-
-    </script>
+    <style>
+        <?php include "./styles/admindashboard.css" ?>
+    </style>
+    <script src = './scripts/dashboard.js'></script>
 </body>
 </html>

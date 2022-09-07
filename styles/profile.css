@@ -1,0 +1,439 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 20;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px lightgray;
+    background: white;
+  }
+
+  #logo {
+    width: 180px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .flex, .flexed {
+    display: flex;
+    align-items: center;
+  }
+
+  .fa-bars, .fa-bell-o, .fa-toggle-off {
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  #bars {
+    display: none;
+  }
+
+  .fa-toggle-off {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .fa-power-off {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .flexed img {
+    width: 50px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 20px;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  #logout {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  main {
+    position: relative;
+    top: 80px;
+}
+
+#main {
+    width: 80%;
+    position: absolute;
+    z-index: -3;
+    right: 0px;
+    padding: 50px 30px;
+    background: rgb(250, 250, 245);
+    transition: 0.5s ease-in-out;
+  }
+
+  #sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 0 0 10px lightgray;
+    z-index: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  #sidebar :nth-child(2) {
+    font-weight: bold;
+  }
+  
+  #sidebar a:hover {
+    font-weight: bold;
+  }
+
+  .item {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    padding: 40px 20px;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+  }
+
+  .icon {
+    display: inline-block;
+    padding-right: 15px;
+  }
+
+  .main h2, .main h3 {
+    color: rgb(43, 43, 42);
+  }
+
+  #profile {
+    width: 100%;
+    margin: 30px 0px;
+    padding: 50px 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px lightgray;
+    display: flex;
+  }
+
+  #update {
+    width: 100%;
+    margin: 30px 0px;
+    padding: 50px 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px lightgray;
+    display: none;
+  }
+
+  #grid {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "a b"
+        "c d"
+        "e e"
+        "f f"
+        "g g"
+    ;
+  }
+
+  #grid input {
+    padding-left: 10px;
+    height: 50px;
+  }
+
+  #grid :nth-child(1) {
+    grid-area: a;
+  }
+
+  #grid :nth-child(2) {
+    grid-area: b;
+  }
+
+  #grid :nth-child(3) {
+    grid-area: c;
+  }
+
+  #grid :nth-child(4) {
+    grid-area: d;
+  } 
+
+  #grid :nth-child(5) {
+    grid-area: e;
+  }
+
+  #grid :nth-child(6) {
+    grid-area: f;
+  }
+
+  #grid :nth-child(7) {
+    grid-area: g;
+  }
+
+  #btn {
+    width: 200px;
+    cursor: pointer;
+  }
+
+  .details {
+    margin-left: 30px;
+    width: 80%;
+  }
+
+  .details button {
+    padding: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 35px;
+  }
+
+  #profimg {
+    width: 200px;
+    height: 250px;
+  }
+
+  #person, #parent, #personal {
+    display: inline-block;
+    margin: 10px 30px 10px 0px;
+    cursor: pointer;
+  }
+
+  #person, #personal {
+    font-weight: bold;
+    border-bottom: 3px solid black;
+  }
+
+  .section {
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: relative;
+  }
+
+  /* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    right: 25%;
+    z-index: 9;
+    background-color: white;
+    width: 50%;
+    text-align: center;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    padding: 30px;
+    /* margin: 20px; */
+  }
+
+  .form-container button {
+    margin: 0px 30px;
+    width: 120px;
+    height: 40px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .form-container button a {
+    text-decoration: none;
+    color: white;
+  }
+
+  #all {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #mall .four {
+    margin-right: 20px;
+  }
+
+  #mall {
+    display: none;
+  }
+  
+  .one, .two, .three, .four, .five {
+    margin-bottom: 30px;
+  }
+
+  .one div, .two div, .three div, .four div, .five div {
+    margin-bottom: 30px;
+  }
+
+  .one div :nth-child(1), .two div :nth-child(1), .three div :nth-child(1), .four div :nth-child(1), .five div :nth-child(1) {
+    color: rgb(139, 135, 135);
+  }
+
+  #avatar {
+    position: relative;
+    height: 253px;
+    display: none;
+  }
+
+  #avatar input {
+    position: absolute;
+    z-index: 25;
+    width: 200px;
+    height: 253px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* #num {
+    position: absolute;
+    z-index: 35;
+    opacity: 1;
+    cursor: pointer;
+  } */
+ 
+  #span {
+    position: absolute;
+    z-index: 20;
+    color: white;
+    display: inline-block;
+    width: 200px;
+    height: 253px;
+    padding: 115px 25px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  #output {
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  #savepic {
+    display: none;
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  input[type="password"]:focus {
+    outline: none;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 576px) {
+    #mobile{
+      display: block;
+    }
+    
+        #bars {
+          display: inline;
+        }
+    
+        #bar, #logout {
+          display: none;
+        }
+
+    #sidebar {
+      margin-left: -210px;
+      background: white;
+    }
+
+    #main{
+      width: 100%;
+      z-index: -2;
+      left: 0px;
+      padding: 30px 15px;
+      /* position: fixed; */
+    }
+
+    nav {
+      padding: 10px;
+    }
+
+    .flexed img {
+      margin: 0px;
+    }
+
+    #logo {
+      margin-left: 0px;
+    }
+
+    .fa-toggle-off {
+      margin-right: 10px;
+    }
+
+    #profile {
+      flex-direction: column;
+      padding: 25px 15px;
+    }
+
+    .details {
+      margin-left: 0px;
+      width: 100%;
+    }
+
+    #person, #parent, #personal, #parental {
+      margin: 10px 10px 10px 0px;
+      font-size: 11px;
+    }
+
+    .one, .two, .three, .four, .five {
+      font-size: 12px;
+      width: 30%;
+      word-break: break-all;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-bottom: 0px;
+    }
+
+    #grid {
+      grid-template-areas: 
+          "a"
+          "b"
+          "c"
+          "d"
+          "e"
+          "f"
+          "g"
+      ;
+      gap: 15px;
+    }
+
+    #grid input {
+      height: 30px;
+      display: inline-block;
+    }
+
+    #btn {
+      width: 100px;
+    }
+
+    #update {
+      padding: 25px 10px;
+    }
+
+    #profimg {
+      width: 120px;
+      height: 150px;
+    }
+  
+
+  }

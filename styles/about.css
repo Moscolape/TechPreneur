@@ -308,6 +308,10 @@
         line-height: 1.5;
     }
 
+    .ourhistory ol {
+      margin-left: 20px;
+    }
+
     .strategy {
         margin: 0px 50px;
         width: 40%;

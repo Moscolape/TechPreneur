@@ -1,5 +1,5 @@
 
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -63,7 +63,7 @@
             <span>Username</span>
         </div>
         <div class="inputBox">
-            <input type="password" name = "passone" required id="passInput">
+            <input type="password" name = "passing" required id="passInput">
             <span>Password</span>
             <img src="images/see.png" alt="" id="see">
             <img src="images/hidden.png" alt="" id="hide">
@@ -82,7 +82,10 @@
                 //user login details have been posted
 
                 $username = $_POST['username'];
-                $password = md5($_POST['passone']);
+                $password = $_POST['passing'];
+                $pass = md5($password);
+
+                $check = substr($pass, 0, -12);
 
                 //read from database
 
@@ -94,14 +97,20 @@
                     if($result && mysqli_num_rows($result) > 0) {
                         $user_data = mysqli_fetch_assoc($result);
             
-                        if($user_data['students_password'] = $password) {
+                        if($user_data['students_password'] === $check) {
 
                             $_SESSION['user_id'] = $user_data['user_id'];
-                            header('Location: dashboard.php');
+                            header('Location: mydashboard.php');
                             die;
                         }
                     }
                 } echo "<p style = 'font-size: 12px; align-self: flex-start; color: red; margin: -20px 0px 0px 5%;'>Wrong username or password</p>";
+
+                // echo "<p>$password</p>";
+
+                // echo "<p>$pass</p>";
+
+                // echo $check;
 
         
                 mysqli_close($con);

@@ -159,7 +159,7 @@ confirmPassword.addEventListener('input', () => {
     
     /* Prevent default behaviour, prepare and send API request */
 
-    emailAddress.addEventListener('input', () => {
+    emailAddress.addEventListener('input', ($event) => {
 
     if (emailAddress !== "") {
 
@@ -175,17 +175,17 @@ confirmPassword.addEventListener('input', () => {
     
                 if(response.formatCheck == 'false' || response.smtpCheck == 'false' || response.dnsCheck == 'false' || response.freeCheck == 'false'){
                     fifthsmall.style.display = 'block';
-        
+                    register.setAttribute('disabled', true);
                 } else {
         
                     fifthsmall.textContent = response.emailAddress + ' is valid';
-                    fifthsmall.style.color = 'green'
+                    fifthsmall.style.color = 'green';
+                    register.removeAttribute('disabled');
         
                 }
         
             }};
-    }
-
+        }
     });
 
 

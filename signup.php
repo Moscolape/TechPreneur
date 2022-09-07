@@ -31,34 +31,19 @@ session_start();
 
     
         //save to database
-        $user_id = random_num(20);
+        $user_id = random_num(32);
 
-        $query = "INSERT INTO $dbtable (student_surname, student_firstname, student_middlename, date_of_birth, gender, fathers_name, fathers_phone, fathers_email, mothers_name, mothers_phone, mothers_email, schools_name, schools_address, students_username, students_email, students_password, user_id, vkey ) VALUES ('$childsurname','$childfirstname','$childmidname','$dateofbirth','$gender','$fathername','$fathernumber','$fatheremail','$mothername','$mothernumber','$motheremail','$schoolname','$schooladdress','$username','$useremail','$pass','$user_id', '$vkey')";
+        // $query = `INSERT INTO $dbtable (student_surname, student_firstname, student_middlename, date_of_birth, gender, fathers_name, fathers_phone, fathers_email, mothers_name, mothers_phone, mothers_email, schools_name, schools_address, students_username, students_email, students_password, user_id, vkey ) VALUES ('$childsurname','$childfirstname','$childmidname','$dateofbirth','$gender','$fathername','$fathernumber','$fatheremail','$mothername','$mothernumber','$motheremail','$schoolname','$schooladdress','$username','$useremail','$pass','$user_id', '$vkey')`;
 
-
-        $res = mysqli_query($con, $query);
-
-        if($res) {
+        $query = "INSERT INTO $dbtable (students_username, students_password, student_surname, student_firstname, student_middlename, date_of_birth, gender, fathers_name, fathers_phone, fathers_email, mothers_name, mothers_phone, mothers_email,schools_name, schools_address, students_email,user_id, vkey ) VALUES ('$username', '$pass','$childsurname','$childfirstname','$childmidname','$dateofbirth','$gender', '$fathername','$fathernumber','$fatheremail','$mothername','$mothernumber','$motheremail','$schoolname','$schooladdress','$useremail', '$user_id', '$vkey')";
 
 
-            $to = 'chunkums088@gmail.com';
-            $subject = "Email Verification";
-            $message = "<a href='localhost/techpreneur/dashboard.php'>Go to your dashboard</a>";
-            $headers = "From: chunkums088@gmail.com";
-            $headers .= "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
-
-            mail($to, $subject, $message, $headers);
-
-            // header('Location: login.php');
-            // die;
-
-        }
+        mysqli_query($con, $query);
         
         mysqli_close($con);
 
-        // header('Location: login.php');
-        // die;
+        header('Location: login.php');
+        die;
 
     }
 
@@ -129,23 +114,29 @@ session_start();
             <h3>Name of the Applicant</h3>
             <div class="names">
                 <div class="inputBox">
-                    <input type="text" name = "csname" id = 'csname' oninput='saveValue(this);' required>
+                    <input type="text" name = "csname" id = 'csname' required>
                     <span>Surname</span>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name = "cfname" id = "cfname" oninput='saveValue(this);' required>
+                    <input type="text" name = "cfname" id = "cfname" required>
                     <span>First Name</span>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name = "cmname" id = "cmname" oninput='saveValue(this);' required>
+                    <input type="text" name = "cmname" id = "cmname" required>
                     <span>Middle Name</span>
                 </div>
             </div>
 
             <div class="date" aria-required="true">
                 <label for="date"><b>Date of Birth</b></label>
-                <input type="date" id="date" oninput='saveValue(this);' name = "date">
+                <input type="date" id="date" name = "date">
             </div>
+
+            <!-- <div class="date" aria-required="true">
+                <label for="date"><b>Profile Picture</b></label>
+                <input type="file" name="image" id="file" onchange="loadFile(event)" accept='image/*'>
+                <img src="" id="output" width="200" />
+            </div> -->
 
 
             <div class="date" aria-required="true">
@@ -160,15 +151,15 @@ session_start();
             <h4>Father's Details</h4>
             <div class="named">
                 <div class="inputBox" id = "yes">
-                    <input type="text" name = "ffname" id = "ffname" oninput='saveValue(this);' required>
+                    <input type="text" name = "ffname" id = "ffname" required>
                     <span>Full Name</span>
                 </div>
                 <div class="inputBox" id="yes">
-                    <input type="text" name = "fnumber" id = "fnumber" oninput='saveValue(this);' required>
+                    <input type="text" name = "fnumber" id = "fnumber" required>
                     <span>Phone No.</span>
                 </div>
                 <div class="inputBox" id="yes">
-                    <input type="email" name = "femail" id = "femail" oninput='saveValue(this);' required>
+                    <input type="email" name = "femail" id = "femail" required>
                     <span>Email Address</span>
                 </div>
                 <div class="inputBox"></div>
@@ -178,15 +169,15 @@ session_start();
             <h4>Mother's Details</h4>
             <div class="named">
                 <div class="inputBox" id = "yes">
-                    <input type="text" name = "mfname" id = "mfname" oninput='saveValue(this);' required>
+                    <input type="text" name = "mfname" id = "mfname" required>
                     <span>Full Name</span>
                 </div>
                 <div class="inputBox" id="yes">
-                    <input type="text" name = "mnumber" id = "mnumber" oninput='saveValue(this);' required>
+                    <input type="text" name = "mnumber" id = "mnumber" required>
                     <span>Phone No.</span>
                 </div>
                 <div class="inputBox" id="yes">
-                    <input type="email" name = "memail" id = "memail" oninput='saveValue(this);' required>
+                    <input type="email" name = "memail" id = "memail" required>
                     <span>Email Address</span>
                 </div>
                 <div class="inputBox"></div>
@@ -196,11 +187,11 @@ session_start();
 
             <div class="named">
                 <div class="inputBox" id="yes">
-                    <input type="text" name = "schoolname" id = "schoolname" oninput='saveValue(this);' required>
+                    <input type="text" name = "schoolname" id = "schoolname" required>
                     <span>School's Name</span>
                 </div>
                 <div class="inputBox" id="yes">
-                    <input type="text" name = "schooladdress" id = "schooladdress" oninput='saveValue(this);' required>
+                    <input type="text" name = "schooladdress" id = "schooladdress" required>
                     <span>School's Address</span>
                 </div>
             </div>
@@ -278,5 +269,18 @@ session_start();
 
     <script src="./scripts/signup.js"></script>
     <script src="./scripts/menu.js"></script>
+    <script>
+        var loadFile = function (event) {
+        var image = document.getElementById("output");
+        image.style.alignSelf = 'flex-start';
+        // image.setAttribute('src', URL.createObjectURL(event.target.files[0]));
+        // console.log(URL.createObjectURL(event.target.files[0]));
+        // if(typeof(Storage) !== undefined) {
+            localStorage.setItem('newpic', URL.createObjectURL(event.target.files[0]));
+            image.src = localStorage.getItem('newpic');
+            // document.getElementById('savepic').style.display = 'inline-block'
+        // }
+      };
+    </script>
 </body>
 </html>

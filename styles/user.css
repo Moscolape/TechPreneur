@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 20;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px lightgray;
+    background: white;
+  }
+
+  main {
+    position: relative;
+    top: 80px;
+  }
+
+  #logo {
+    width: 180px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .flex, .flexed {
+    display: flex;
+    align-items: center;
+  }
+
+  .fa-bars, .fa-bell-o, .fa-toggle-off {
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  #bars {
+    display: none;
+  }
+
+  .fa-toggle-off {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .fa-power-off {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  .flexed img {
+    width: 50px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 20px;
+  }
+
+  #logout {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  #main {
+    width: 80.5%;
+    position: absolute;
+    right: 0px;
+    padding: 50px 30px;
+    transition: 0.5s ease-in-out;
+  }
+
+  #sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 0 0 10px lightgray;
+    z-index: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  #sidebar :nth-child(1) {
+    font-weight: bold;
+  }
+
+  #sidebar a:hover {
+    font-weight: bold;
+  }
+
+  .item {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    padding: 40px 20px;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+  }
+
+  .icon {
+    display: inline-block;
+    padding-right: 15px;
+  }
+
+  .main h2, .main h3 {
+    color: rgb(43, 43, 42);
+  }
+
+    /* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    right: 25%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.747);
+    color: white;
+    width: 50%;
+    text-align: center;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    padding: 30px;
+    /* margin: 20px; */
+  }
+
+  .form-container button {
+    margin: 0px 30px;
+    width: 120px;
+    height: 40px;
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .form-container button a {
+    text-decoration: none;
+    color: black;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 576px) {
+    #mobile{
+      display: block;
+    }
+    
+        #bars {
+          display: inline;
+        }
+    
+        #bar, #logout {
+          display: none;
+        }
+
+    #sidebar {
+      margin-left: -210px;
+      background: white;
+    }
+
+    #main{
+      width: 100%;
+      z-index: -2;
+      left: 0px;
+      /* position: fixed; */
+    }
+
+    nav {
+      padding: 10px;
+    }
+
+    .flexed img {
+      margin: 0px ;
+    }
+
+    #logo {
+      margin-left: 0px;
+    }
+
+    .fa-toggle-off {
+      margin-right: 10px;
+    }
+
+  }
