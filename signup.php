@@ -4,6 +4,7 @@ session_start();
 
     include("connection.php");
     include("functions.php");
+    require_once("verify.php");
 
     // $user_data = check_login($con);
 
@@ -41,6 +42,8 @@ session_start();
         mysqli_query($con, $query);
         
         mysqli_close($con);
+
+        verifyEmail($useremail, $vkey);
 
         header('Location: login.php');
         die;
